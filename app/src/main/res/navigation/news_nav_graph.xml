@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/searchNews"
-        android:name="com.example.newslance.SearchNews"
+        android:name="com.example.newslance.ui.fragments.SearchNews"
         android:label="fragment_search_news"
         tools:layout="@layout/fragment_search_news" >
         <action
@@ -39,7 +39,10 @@
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_searchNews_to_articleFragment2"
+            app:destination="@id/articleFragment" />
     </fragment>
     <fragment
         android:id="@+id/articleFragment"
@@ -49,5 +52,9 @@
         app:enterAnim="@anim/nav_default_enter_anim"
         app:exitAnim="@anim/nav_default_exit_anim"
         app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-        app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        app:popExitAnim="@anim/nav_default_pop_exit_anim">
+        <argument
+            android:name="article"
+            app:argType="com.example.newslance.newsapi.Article" />
+    </fragment>
 </navigation>
